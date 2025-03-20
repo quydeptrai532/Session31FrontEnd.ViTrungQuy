@@ -10,7 +10,7 @@ const employees = [
 const rowsPerPage = 3; 
 let currentPage = 1;  
 
-// Hàm hiển thị bảng dựa trên trang hiện tại
+
 function renderTable(page) {
     let start = (page - 1) * rowsPerPage; 
     let end = start + rowsPerPage;
@@ -29,10 +29,10 @@ function renderTable(page) {
     document.getElementById("currentPage").textContent = page;
 }
 
-// Gọi hàm để hiển thị trang đầu tiên
+
 renderTable(currentPage);
 
-// Sự kiện Previous Page
+
 document.getElementById("prevPage").addEventListener("click", function() {
     if (currentPage > 1) {
         currentPage--;
@@ -40,7 +40,7 @@ document.getElementById("prevPage").addEventListener("click", function() {
     }
 });
 
-// Sự kiện Next Page
+
 document.getElementById("nextPage").addEventListener("click", function() {
     if (currentPage * rowsPerPage < employees.length) {
         currentPage++;
@@ -48,7 +48,7 @@ document.getElementById("nextPage").addEventListener("click", function() {
     }
 });
 
-// 🟢 Thêm nhân viên vào danh sách
+
 document.getElementById("addEmployeeForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -60,18 +60,18 @@ document.getElementById("addEmployeeForm").addEventListener("submit", function(e
         return;
     }
 
-    // Tạo ID mới cho nhân viên
+ 
     let newId = employees.length > 0 ? employees[employees.length - 1].id + 1 : 1;
     employees.push({ id: newId, name, role });
 
-    // Reset input
+
     document.getElementById("name").value = "";
     document.getElementById("position").value = "";
 
-    // Cập nhật trang nếu cần
+
     let totalPages = Math.ceil(employees.length / rowsPerPage);
     if (currentPage < totalPages) {
-        currentPage = totalPages; // Chuyển sang trang cuối cùng nếu có trang mới
+        currentPage = totalPages; 
     }
 
     renderTable(currentPage);
