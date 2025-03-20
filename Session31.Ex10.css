@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+span{
+    border: 1px solid black;
+    padding: 20px;
+}
+button{
+    margin-top: 20px;
+}
+table,td{
+    margin-left: 600px;
+    font-size: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+#currentPage{
+    width: 20px;
+    height: 20px;
+}
