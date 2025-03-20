@@ -1,0 +1,29 @@
+
+form{
+    position: relative;
+    background-color: red;
+    padding: 30px;
+    text-align: center;
+}
+input{
+    width: 95%;
+    height: 30px;
+}
+button{
+    position: absolute;
+    height: 35px;
+    width: 30%;
+    right: 60px;
+}
+
+p{  
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    background-color: white;
+    padding: 20px;
+    
+}
+p:nth-of-type(4),p:nth-of-type(6){
+    background-color: gray;
+}

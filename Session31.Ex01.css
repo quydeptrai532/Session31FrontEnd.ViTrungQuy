@@ -1,0 +1,8 @@
+div{
+    width: max-content;
+    margin: 50px;
+    font-size: larger;
+    color: pink;
+    border: 1px solid black;
+    border-radius: 20px;
+}
